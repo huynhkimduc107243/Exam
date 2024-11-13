@@ -27,8 +27,9 @@ public class Duc107243 {
         System.out.println();
     }
 
-    public static int timMax(int b[])
+    public static void timMax(int b[])
     {
+        System.out.println("Cau 3.2: Phan tu lon nhat cua mang b la: ");
         int max = b[0];
         // Duyệt qua từng phần tử để so sánh với max
         for (int i = 1; i < b.length; i++)
@@ -38,11 +39,11 @@ public class Duc107243 {
                 max = b[i];
             }
         }
-        return max;
     }
 
-    public static int tinhTongChan(int b[])
+    public static void tinhTongChan(int b[])
     {
+        System.out.println("Cau 3.3: Tong cac phan tu chan cua mang b la: ");
         // Khởi tạo biến tong kiểu int và gán tong = 0
         int tong = 0;
         for (int i = 0; i < b.length; i++)
@@ -52,15 +53,14 @@ public class Duc107243 {
                 tong += b[i];
             }
         }
-        return tong;
     }
 
     public static void hienThiPhanTuMin5(int b[])
     {
-        System.out.print("Cau 3.4: Cac phan tu nho hon 5 cua mang b: ");
+        System.out.print("Cau 3.4: Cac phan tu lon hon 5 cua mang b: ");
         for (int i = 0; i < b.length; i++)
         {
-            if (b[i] < 5)
+            if (b[i] > 5)
             {
                 System.out.printf(b[i] + "\t");
             }
@@ -72,8 +72,8 @@ public class Duc107243 {
         int b[] = {3, 5, 6, 8, 10, 14, 17, 19, 20};
         hienThiMang_a();
         hienThiMang(b);
-        System.out.println("Cau 3.2: Phan tu lon nhat cua mang b la: " + timMax(b));
-        System.out.println("Cau 3.3: Tong cac phan tu chan cua mang b la: " + tinhTongChan(b));
+        timMax(b);
+        tinhTongChan(b);
         hienThiPhanTuMin5(b);
     }
 }
